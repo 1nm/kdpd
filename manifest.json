@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "KidsDiary Photo Downloader",
+  "version": "0.0.1",
+  "description": "Adds a download button to the notification page, allowing the users to download all the photos at once",
+  "author": "1nm",
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {},
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://kidsdiary.jp/*"
+  ]
+}
