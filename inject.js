@@ -7,21 +7,12 @@ if (window.contentScriptInjected !== true) {
     const contentNodes = [];
     const images = [];
     for (const { addedNodes } of mutations) {
-      for (const n of addedNodes) {
-        if (!n.tagName) {
-          continue;
-        }
-        if (n.matches("section.content > div > div > div")) {
-          contentNodes.push(n);
-        } else if (n.firstElementChild) {
+      for (const addedNode of addedNodes) {
+        if (addedNode.tagName && addedNode.tagName == "SECTION") {
           contentNodes.push(
-            ...n.querySelectorAll("section.content > div > div > div")
+            ...addedNode.querySelectorAll("section.content > div > div > div")
           );
-        }
-        if (n.matches("li > div > img")) {
-          images.push(n);
-        } else if (n.firstElementChild) {
-          images.push(...n.querySelectorAll("li > div > img"));
+          images.push(...addedNode.querySelectorAll("li > div > img"));
         }
       }
     }
@@ -29,13 +20,16 @@ if (window.contentScriptInjected !== true) {
       return;
     }
     const contentNode = contentNodes[0];
-    const imageUrls = images.map((img) =>
-      img.currentSrc.substring(0, img.currentSrc.length - 3)
-    );
+    const imageUrls = images
+      .map((img) => img.getAttribute("src"))
+      .map((s) => s.substring(0, s.length - 3))
+      .map((s) => `https://kidsdiary.jp${s}`);
+    // console.log(imageUrls);
     const button = document.createElement("button");
     const buttonDiv = document.createElement("div");
     const title =
-      contentNode.children?.[1].firstChild?.firstChild?.innerHTML || "photo";
+      contentNode.children?.[1].firstElementChild?.firstElementChild
+        ?.innerHTML || "photo";
     button.innerHTML = `Download All ${imageUrls.length} Photos`;
     button.onclick = function () {
       console.log(`Zipping ${imageUrls.length} images to '${title}.zip' ...`);
@@ -65,11 +59,11 @@ if (window.contentScriptInjected !== true) {
         .then(function (content) {
           progress.style.display = "none";
           progress.value = 0;
-          console.log(`Saving '${title}.zip' ...`);
+          console.log(`Downloading '${title}.zip' ...`);
           saveAs(content, `${title}.zip`);
         });
     };
-    const progress = document.createElement("PROGRESS");
+    const progress = document.createElement("progress");
     progress.max = 100;
     progress.value = 0;
     progress.style = "display: none; margin-top: 10px; width: 240px;";
@@ -79,7 +73,7 @@ if (window.contentScriptInjected !== true) {
     contentNode.insertBefore(buttonDiv, contentNode.children[1]);
   });
 
-  observer.observe(document.querySelector("#root") || document.body, {
+  observer.observe(document.body, {
     subtree: true,
     childList: true,
   });
