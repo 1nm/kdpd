@@ -1,4 +1,4 @@
-![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fkoafemebeiieojgecjfnhnhbcfgnlji?color=success&style=flat-square)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fkoafemebeiieojgecjfnhnhbcfgnlji?color=success&style=flat-square)](https://chrome.google.com/webstore/detail/kidsdiary-photo-downloade/fkoafemebeiieojgecjfnhnhbcfgnlji?hl=en)
 
 # KDPD (KidsDiary Photo Downloader)
 
