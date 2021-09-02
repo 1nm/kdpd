@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "KidsDiary Photo Downloader",
   "version": "0.0.3",
-  "description": "Adds a download button to KidsDiary notification page and allows users to download all full resolution photos with a single click.",
+  "description": "A Chrome extention that allows users to download photos from KidsDiary with a single click.",
   "author": "1nm",
   "background": {
     "service_worker": "service-worker.js"
