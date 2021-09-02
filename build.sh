@@ -7,7 +7,7 @@ VERSION=0.0.1
 if [[ $GITHUB_REF == refs/tags/* ]]; then
     VERSION=${GITHUB_REF#refs/tags/}
     echo "Release name: $VERSION"
-    sed -i "s/0.0.1/$VERSION/g" manifest.json
+    sed -i "s/0.0.1-snapshot/$VERSION/g" manifest.json
 fi
 
 # Use terser to minify scripts

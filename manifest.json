@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "KidsDiary Photo Downloader",
-  "version": "0.0.3",
+  "version": "0.0.1-snapshot",
   "description": "A Chrome extention that allows users to download photos from KidsDiary with a single click.",
   "author": "1nm",
   "background": {
