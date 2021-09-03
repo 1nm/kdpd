@@ -2,9 +2,19 @@
 
 # KDPhD (KidsDiary Photo Downloader)
 
-
-A Chrome extension that adds a download button to KidsDiary notification page, and allows users to download all full resolution photos with a single click.
-
-Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/kidsdiary-photo-downloade/fkoafemebeiieojgecjfnhnhbcfgnlji?hl=en)
-
 [<img src="https://user-images.githubusercontent.com/1180083/131767157-d291d444-160e-4da3-8a80-bb670f193e11.png" width=64>](https://chrome.google.com/webstore/detail/kidsdiary-photo-downloade/fkoafemebeiieojgecjfnhnhbcfgnlji?hl=en)
+
+
+A Chrome extension that adds a download button to the notices and allows users to download all full resolution photos with a single click.
+
+
+## How to use
+1. Install the extension from [Chrome Web Store](https://chrome.google.com/webstore/detail/kidsdiary-photo-downloade/fkoafemebeiieojgecjfnhnhbcfgnlji?hl=en).
+
+2. Go to [KidsDiary](https://kidsdiary.jp/) and login with your account.
+
+3. Navigate to the notification page, click on a notice (e.g. Weekly Photos), you will see a button `Download All $N Photos` where `$N` is the number of the photos on that page.
+
+4. Click the button, a zip archive of the photos will be downloaded soon. 
+
+   <img src="https://user-images.githubusercontent.com/1180083/131385829-90791534-ffcf-4c29-bdda-c18619bcb384.png" width=480>
