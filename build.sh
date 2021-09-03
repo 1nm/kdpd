@@ -16,7 +16,7 @@ docker run --rm -v $PWD:/data node:14-alpine sh -c "npm i -g terser && find /dat
 echo "Done"
 
 echo "Building archive..."
-zip -r build/kdpd-${VERSION}.zip image utils manifest.json *.js
+zip -r build/kdpd-${VERSION}.zip images utils manifest.json *.js
 echo "Done"
 
 ls -l build
