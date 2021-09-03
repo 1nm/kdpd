@@ -25,6 +25,9 @@ if (window.contentScriptInjected !== true) {
       .map((s) => s.substring(0, s.length - 3))
       .map((s) => `https://kidsdiary.jp${s}`);
     // console.log(imageUrls);
+    if (imageUrls.length == 0) {
+      return;
+    }
     const button = document.createElement("button");
     const buttonDiv = document.createElement("div");
     const title =
