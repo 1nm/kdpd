@@ -12,7 +12,7 @@ fi
 
 # Use terser to minify scripts
 echo "Minifying js files..."
-docker run --rm -v $PWD:/data node:14-alpine sh -c "npm i -g terser && find /data -path '/data/utils' -prune -o -name '*.js' | sed -E 's/.*/terser -c -m -o \0.minified \0 \&\& mv \0.minified \0/' | sh"
+docker run --rm -v $PWD:/data node:14-alpine sh -c "npm i -g terser && find /data -name utils -prune -o -name '*.js' -print | sed -E 's/.*/terser -c -m -o \0.minified \0 \&\& mv \0.minified \0/' | sh"
 echo "Done"
 
 echo "Building archive..."
