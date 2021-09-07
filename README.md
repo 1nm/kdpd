@@ -13,8 +13,8 @@ A Chrome extension that adds a download button to the notices and allows users t
 
 2. Go to [KidsDiary](https://kidsdiary.jp/) and login with your account.
 
-3. Navigate to the notification page, click on a notice (e.g. Weekly Photos), you will see a button `Download All $N Photos` where `$N` is the number of the photos on that page.
+3. Navigate to the notification page, click on a notice (e.g. Weekly Photos). If there are photos in the notice, you will see a button `Download All $N Photos` where `$N` is the number of the photos.
 
-4. Click the button, a zip archive of the photos will be downloaded soon. 
+4. Click the button, a zip archive of the photos will be downloaded soon.
 
    <img src="https://user-images.githubusercontent.com/1180083/131385829-90791534-ffcf-4c29-bdda-c18619bcb384.png" width=480>
