@@ -11,7 +11,7 @@ A Chrome extension that adds a download button to the notices and allows users t
 ## How to use
 1. Install the extension from [Chrome Web Store](https://chrome.google.com/webstore/detail/kidsdiary-photo-downloade/fkoafemebeiieojgecjfnhnhbcfgnlji?hl=en).
 
-2. Go to [KidsDiary](https://kidsdiary.jp/) and login with your account.
+2. Go to [KidsDiary](https://kidsdiary.jp/login) and login with your account.
 
 3. Navigate to the notification page, click on a notice (e.g. Weekly Photos). If there are photos in the notice, you will see a button `Download All $N Photos` where `$N` is the number of the photos.
 
